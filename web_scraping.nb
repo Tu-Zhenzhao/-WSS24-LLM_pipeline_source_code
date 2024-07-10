@@ -1,0 +1,1875 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     83087,       1867]
+NotebookOptionsPosition[     77227,       1769]
+NotebookOutlinePosition[     77624,       1785]
+CellTagsIndexPosition[     77581,       1782]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"url", " ", "=", " ", 
+  "\"\<https://resources.wolframcloud.com/NeuralNetRepository/all/\>\""}]], \
+"Input",
+ CellChangeTimes->{{3.928311769753463*^9, 3.9283117759538107`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"d3387619-14b7-47e1-acfc-13717dbf9540"],
+
+Cell[BoxData["\<\"https://resources.wolframcloud.com/NeuralNetRepository/all/\
+\"\>"], "Output",
+ CellChangeTimes->{3.928311786583987*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"e0daa211-f325-4c2f-8e37-46dc11c44f27"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9283117974472647`*^9, 3.9283118018627567`*^9}, {
+  3.928312011078641*^9, 3.928312013767988*^9}, {3.928312102794979*^9, 
+  3.928312120834386*^9}, {3.928312506092819*^9, 3.928312527454764*^9}, {
+  3.92831277740028*^9, 3.928312799671856*^9}, {3.928312834970799*^9, 
+  3.928312850771598*^9}},ExpressionUUID->"97fb82f5-dce1-4f62-8635-\
+b073990c1d12"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "URLRead", "noelem", 
+   "\"The element \\\"\\!\\(\\*RowBox[{\\\"\\\\\\\"main\\\\\\\"\\\"}]\\)\\\" \
+is not allowed.\"", 2, 31, 5, 31684713363444556821, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9283127784292808`*^9},
+ CellLabel->
+  "During evaluation of \
+In[31]:=",ExpressionUUID->"eff1aac3-fb8c-4b9c-92db-7700d5b6de20"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"URLRead", "[", 
+  RowBox[{"url", ",", " ", "\"\<Body\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.928312853259548*^9, 3.9283129688888807`*^9}, {
+  3.928313220226234*^9, 3.9283132244695663`*^9}, {3.928313543545038*^9, 
+  3.928313574642624*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"ae880b35-93a2-4166-b0f7-a6f956da02f2"],
+
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  "\"\<https://resources.wolframcloud.com/NeuralNetRepository/resources/2D-\
+Face-Alignment-Net-Trained-on-300W-Large-Pose-Data/\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.928313934686565*^9, 3.9283139460782146`*^9}, {
+  3.928314037887547*^9, 3.928314048174447*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"bfe25212-0a1e-4363-9c1c-50d72082d01b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"content", " ", "=", " ", 
+   RowBox[{"URLRead", "[", 
+    RowBox[{
+    "\"\<https://www.wolframcloud.com/obj/resourcesystem/published/\
+NeuralNetRepository/all-data.json\>\"", ",", " ", "\"\<Body\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.928314164702878*^9, 3.928314192118369*^9}, {
+   3.928314227813361*^9, 3.928314232263699*^9}, 3.928314296236083*^9, 
+   3.928330160228071*^9},
+ CellLabel->
+  "In[501]:=",ExpressionUUID->"a0ac8c4f-dba3-48a6-aa81-85c9cacd28ae"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+   "resourceURL", " ", "=", " ", 
+    "\"\<https://www.wolframcloud.com/obj/resourcesystem/published/\
+NeuralNetRepository/all-data.json\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"jsonData", "=", 
+    RowBox[{"Import", "[", 
+     RowBox[{"resourceURL", ",", "\"\<RawJSON\>\""}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<jsonData.json\>\"", ",", "jsonData", ",", "\"\<JSON\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.928314412647195*^9, 3.9283144205221777`*^9}, {
+   3.928314579027871*^9, 3.9283146273735247`*^9}, 3.9283301938547688`*^9, {
+   3.928399368374269*^9, 3.928399389705388*^9}, 3.928399440684346*^9, {
+   3.928399474986623*^9, 3.9283995003462553`*^9}},
+ CellLabel->
+  "In[538]:=",ExpressionUUID->"15ab8506-6b45-4e72-b6f3-d1d637a99f62"],
+
+Cell[BoxData["\<\"jsonData.json\"\>"], "Output",
+ CellChangeTimes->{{3.928399379966605*^9, 3.928399390476665*^9}, 
+   3.9283994425472918`*^9, {3.92839948736909*^9, 3.9283995011598463`*^9}},
+ CellLabel->
+  "Out[540]=",ExpressionUUID->"c87095d2-ff53-4998-bda7-c5a7b8bd1f9c"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "\"\<jsonData.json\>\"", "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->
+  "In[546]:=",ExpressionUUID->"2a6ccad2-46e4-4059-ad7a-e57457d7bb94"],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "\"\<jsonData.json\>\"", "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->
+  "In[541]:=",ExpressionUUID->"b4752a5c-1f70-4e9c-9756-cd5ac6bb3c91"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Function", " ", "for", " ", "retrieveing", " ", "models", " ", "names", 
+    " ", "by", " ", "Alphabet"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"letter", " ", "=", " ", "\"\<Z\>\""}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"alphabetList", " ", "=", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"jsonData", "[", 
+         RowBox[{"[", "x", "]"}], "]"}], "[", "\"\<Name\>\"", "]"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", " ", "1", ",", "27"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "check", " ", "if", " ", "the", " ", "exist", " ", "of", " ", "the", " ", 
+     "letter"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"existStatus", " ", "=", " ", 
+     RowBox[{"MemberQ", "[", 
+      RowBox[{"alphabetList", ",", " ", 
+       RowBox[{"ToUpperCase", "[", "letter", "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<The letter is existed? \>\"", ",", " ", "existStatus"}], 
+    "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Retrieve", " ", "the", " ", "Index", " ", "of", " ", "the", " ", 
+     "Letter"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"indexLetter", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"FirstPosition", "[", 
+       RowBox[{"alphabetList", ",", " ", "letter"}], "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"resourceLetter", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"jsonData", "[", 
+       RowBox[{"[", "indexLetter", "]"}], "]"}], "[", "\"\<Resources\>\"", 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"resourceNames", " ", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{"resourceLetter", ",", 
+        RowBox[{"_Association", "?", 
+         RowBox[{"(", 
+          RowBox[{"KeyExistsQ", "[", "\"\<Name\>\"", "]"}], ")"}]}], ",", 
+        "Infinity"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", " ", "\"\<Name\>\""}], "]"}], "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ";;", " ", ";;", "2"}], "]"}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"resourceDescription", " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{"resourceLetter", ",", 
+        RowBox[{"_Association", "?", 
+         RowBox[{"(", 
+          RowBox[{"KeyExistsQ", "[", "\"\<Name\>\"", "]"}], ")"}]}], ",", 
+        "Infinity"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", " ", "\"\<Description\>\""}], "]"}], "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"2", ";;", " ", ";;", "2"}], "]"}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"resourceData", " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{"resourceLetter", ",", 
+        RowBox[{"_Association", "?", 
+         RowBox[{"(", 
+          RowBox[{"KeyExistsQ", "[", "\"\<Name\>\"", "]"}], ")"}]}], ",", 
+        "Infinity"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", " ", "\"\<Data\>\""}], "]"}], "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ";;", " ", ";;", "2"}], "]"}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"resourceReleaseDate", " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{"resourceLetter", ",", 
+        RowBox[{"_Association", "?", 
+         RowBox[{"(", 
+          RowBox[{"KeyExistsQ", "[", "\"\<Name\>\"", "]"}], ")"}]}], ",", 
+        "Infinity"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", " ", "\"\<ReleaseDate\>\""}], "]"}], "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"2", ";;", " ", ";;", "2"}], "]"}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"combineList", " ", "=", " ", 
+     RowBox[{"Thread", "[", 
+      RowBox[{"{", 
+       RowBox[{
+       "resourceNames", ",", " ", "resourceDescription", ",", " ", 
+        "resourceData", ",", " ", "resourceReleaseDate"}], "}"}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Function", " ", "to", " ", "create", " ", "associations"}], 
+    "*)"}], 
+   RowBox[{
+    RowBox[{"createAssociation", "[", 
+     RowBox[{"data_List", ",", "names_List"}], "]"}], ":=", 
+    RowBox[{"AssociationThread", "[", 
+     RowBox[{"names", "->", "data"}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Create", " ", "the", " ", "list", " ", "of", " ", "associations"}], 
+    "*)"}], 
+   RowBox[{"associations", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"createAssociation", "[", 
+       RowBox[{"#", ",", "ListName"}], "]"}], "&"}], "/@", "combineList"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Function", " ", "to", " ", "convert", " ", "associations", " ", "to", 
+     " ", "markdown"}], "*)"}], 
+   RowBox[{
+    RowBox[{"toMarkdown", "[", "assoc_", "]"}], ":=", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"\"\<### Model Name\\n\>\"", ",", "\"\<Name: \\\"\>\"", ",", 
+      RowBox[{"assoc", "[", "\"\<Name\>\"", "]"}], ",", "\"\<\\\"\\n\\n\>\"", 
+      ",", "\"\<### Description of the model\\n\>\"", ",", 
+      RowBox[{"assoc", "[", "\"\<Description\>\"", "]"}], ",", 
+      "\"\<\\n\\n\>\"", ",", "\"\<### Trained by Data\\n\>\"", ",", 
+      "\"\<DataSet: \\\"\>\"", ",", 
+      RowBox[{"Replace", "[", 
+       RowBox[{
+        RowBox[{"assoc", "[", "\"\<Trained Data\>\"", "]"}], ",", 
+        RowBox[{"_Missing", "->", "\"\<N/A\>\""}]}], "]"}], ",", 
+      "\"\<\\\"\\n\\n\>\"", ",", "\"\<### Time issued\\n\>\"", ",", 
+      RowBox[{"assoc", "[", "\"\<Time\>\"", "]"}], ",", "\"\<\\n\\n\>\"", 
+      ",", "\"\<---\\n\>\""}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Convert", " ", "all", " ", "associations", " ", "to", " ", "markdown"}], 
+    "*)"}], 
+   RowBox[{
+    RowBox[{"markdownContent", "=", 
+     RowBox[{"StringJoin", "[", 
+      RowBox[{"\"\<## Model List\\n\\n\>\"", ",", 
+       RowBox[{"StringJoin", "@@", 
+        RowBox[{"(", 
+         RowBox[{"toMarkdown", "/@", "associations"}], ")"}]}]}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Save", " ", "the", " ", "markdown", " ", "content", " ", "to", " ", "a", 
+     " ", "file"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\<model_list.md\>\"", ",", "markdownContent", ",", "\"\<Text\>\""}], 
+     "]"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Append", " ", "the", " ", "markdown", " ", "content", " ", "to", " ", 
+     "the", " ", "existing", " ", "file"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"fileName", "=", "\"\<model_list.md\>\""}], ";"}], "\n", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"FileExistsQ", "[", "fileName", "]"}], ",", 
+     RowBox[{"Export", "[", 
+      RowBox[{"fileName", ",", 
+       RowBox[{
+        RowBox[{"Import", "[", 
+         RowBox[{"fileName", ",", "\"\<Text\>\""}], "]"}], "<>", 
+        "markdownContent"}], ",", "\"\<Text\>\""}], "]"}], ",", 
+     RowBox[{"Export", "[", 
+      RowBox[{"fileName", ",", "markdownContent", ",", "\"\<Text\>\""}], 
+      "]"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.928316802431261*^9, 3.928316962915845*^9}, {
+   3.928317613287408*^9, 3.9283176441613407`*^9}, {3.928317682036234*^9, 
+   3.928317698096095*^9}, {3.928317745758563*^9, 3.928317783664981*^9}, {
+   3.928317994289508*^9, 3.9283180577364388`*^9}, {3.92831809236353*^9, 
+   3.9283180968488693`*^9}, {3.9283181356854258`*^9, 
+   3.9283182086054564`*^9}, {3.928318392316587*^9, 3.9283183946566267`*^9}, 
+   3.928319146449813*^9, {3.928323914980905*^9, 3.928323932842749*^9}, {
+   3.9283242151666307`*^9, 3.928324222575551*^9}, 3.92832435491576*^9, {
+   3.928324395685843*^9, 3.92832445678482*^9}, {3.928324635309355*^9, 
+   3.928324712678832*^9}, {3.928324849940219*^9, 3.92832486043943*^9}, {
+   3.92832490043865*^9, 3.9283251003857317`*^9}, {3.92832724655965*^9, 
+   3.92832735714915*^9}, {3.9283275099337063`*^9, 3.928327511074337*^9}, {
+   3.928329546365016*^9, 3.928329571297009*^9}, {3.9283299705407124`*^9, 
+   3.9283300138387613`*^9}, {3.928330048997387*^9, 3.9283300499268723`*^9}, {
+   3.928330222436344*^9, 3.92833022269938*^9}, {3.928422241780368*^9, 
+   3.928422247900229*^9}, {3.928423070580166*^9, 3.928423084162506*^9}, {
+   3.928423432319394*^9, 3.928423432612165*^9}, {3.9284855954667997`*^9, 
+   3.928485595836581*^9}, {3.92848583524419*^9, 3.928485836955428*^9}, {
+   3.9284858693607063`*^9, 3.928485869806367*^9}, {3.9284859315356693`*^9, 
+   3.928485968445979*^9}, {3.928486035076136*^9, 3.928486043413903*^9}, {
+   3.928486397483252*^9, 3.9284865979168243`*^9}, {3.9284866317760353`*^9, 
+   3.928486731795164*^9}},
+ CellLabel->
+  "In[1278]:=",ExpressionUUID->"ff8e6d87-b017-4f38-b5d6-4cc008fee586"],
+
+Cell[BoxData["\<\"Z\"\>"], "Output",
+ CellChangeTimes->{
+  3.9283300503508587`*^9, {3.928330196226365*^9, 3.928330212547196*^9}, 
+   3.928414815313765*^9, 3.928422206545701*^9, {3.928422242643124*^9, 
+   3.928422248218362*^9}, {3.928423071584215*^9, 3.928423084618456*^9}, 
+   3.928423433006639*^9, 3.928485596565817*^9, 3.928485837509385*^9, 
+   3.9284858746103497`*^9, 3.9284860450633087`*^9, {3.928486398549893*^9, 
+   3.928486600123021*^9}, {3.928486632667753*^9, 3.92848673231364*^9}},
+ CellLabel->
+  "Out[1278]=",ExpressionUUID->"bf3f9a27-fa56-47bd-a19a-0705f9e51f92"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The letter is existed? \"\>", "\[InvisibleSpace]", "True"}],
+  SequenceForm["The letter is existed? ", True],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.928330050376789*^9, {3.928330196254118*^9, 3.928330212579402*^9}, 
+   3.928414815345449*^9, 3.9284222065816393`*^9, {3.9284222426692657`*^9, 
+   3.9284222482492247`*^9}, {3.928423071613307*^9, 3.928423084643444*^9}, 
+   3.9284234330448227`*^9, 3.928485596602561*^9, 3.928485837538039*^9, 
+   3.928485874637825*^9, 3.928486045090022*^9, {3.928486398580845*^9, 
+   3.928486600143278*^9}, {3.9284866326951447`*^9, 3.928486732339048*^9}},
+ CellLabel->
+  "During evaluation of \
+In[1278]:=",ExpressionUUID->"47f0e444-7313-4714-8b41-24a12811c079"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{
+  3.9283300503508587`*^9, {3.928330196226365*^9, 3.928330212547196*^9}, 
+   3.928414815313765*^9, 3.928422206545701*^9, {3.928422242643124*^9, 
+   3.928422248218362*^9}, {3.928423071584215*^9, 3.928423084618456*^9}, 
+   3.928423433006639*^9, 3.928485596565817*^9, 3.928485837509385*^9, 
+   3.9284858746103497`*^9, 3.9284860450633087`*^9, {3.928486398549893*^9, 
+   3.928486600123021*^9}, {3.928486632667753*^9, 3.928486732355907*^9}},
+ CellLabel->
+  "Out[1284]=",ExpressionUUID->"76be4c6f-5a14-47e2-9813-00636a38c780"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "take", 
+   "\"Cannot take positions \\!\\(\\*RowBox[{\\\"2\\\"}]\\) through \
+\\!\\(\\*RowBox[{\\\"-\\\", \\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\).\"", 2, 1285, 84, 31684713363444556821, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.928486732371983*^9},
+ CellLabel->
+  "During evaluation of \
+In[1278]:=",ExpressionUUID->"f1550aa6-862a-483b-84ee-64d7e2c7473b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", "}"}], "\[LeftDoubleBracket]", 
+  RowBox[{"2", ";;", "All", ";;", "2"}], "\[RightDoubleBracket]"}]], "Output",\
+
+ CellChangeTimes->{
+  3.9283300503508587`*^9, {3.928330196226365*^9, 3.928330212547196*^9}, 
+   3.928414815313765*^9, 3.928422206545701*^9, {3.928422242643124*^9, 
+   3.928422248218362*^9}, {3.928423071584215*^9, 3.928423084618456*^9}, 
+   3.928423433006639*^9, 3.928485596565817*^9, 3.928485837509385*^9, 
+   3.9284858746103497`*^9, 3.9284860450633087`*^9, {3.928486398549893*^9, 
+   3.928486600123021*^9}, {3.928486632667753*^9, 3.9284867323907537`*^9}},
+ CellLabel->
+  "Out[1285]=",ExpressionUUID->"24238892-b61e-4ab8-8266-e4da56904604"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{
+  3.9283300503508587`*^9, {3.928330196226365*^9, 3.928330212547196*^9}, 
+   3.928414815313765*^9, 3.928422206545701*^9, {3.928422242643124*^9, 
+   3.928422248218362*^9}, {3.928423071584215*^9, 3.928423084618456*^9}, 
+   3.928423433006639*^9, 3.928485596565817*^9, 3.928485837509385*^9, 
+   3.9284858746103497`*^9, 3.9284860450633087`*^9, {3.928486398549893*^9, 
+   3.928486600123021*^9}, {3.928486632667753*^9, 3.9284867324070253`*^9}},
+ CellLabel->
+  "Out[1286]=",ExpressionUUID->"0099e00c-6c88-4101-b73a-52faf21893df"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "take", 
+   "\"Cannot take positions \\!\\(\\*RowBox[{\\\"2\\\"}]\\) through \
+\\!\\(\\*RowBox[{\\\"-\\\", \\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\).\"", 2, 1287, 85, 31684713363444556821, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.928486732423049*^9},
+ CellLabel->
+  "During evaluation of \
+In[1278]:=",ExpressionUUID->"e8fa22ba-a9bd-4513-b309-ce9aa3eaa95e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", "}"}], "\[LeftDoubleBracket]", 
+  RowBox[{"2", ";;", "All", ";;", "2"}], "\[RightDoubleBracket]"}]], "Output",\
+
+ CellChangeTimes->{
+  3.9283300503508587`*^9, {3.928330196226365*^9, 3.928330212547196*^9}, 
+   3.928414815313765*^9, 3.928422206545701*^9, {3.928422242643124*^9, 
+   3.928422248218362*^9}, {3.928423071584215*^9, 3.928423084618456*^9}, 
+   3.928423433006639*^9, 3.928485596565817*^9, 3.928485837509385*^9, 
+   3.9284858746103497`*^9, 3.9284860450633087`*^9, {3.928486398549893*^9, 
+   3.928486600123021*^9}, {3.928486632667753*^9, 3.928486732440382*^9}},
+ CellLabel->
+  "Out[1287]=",ExpressionUUID->"662d31f1-82f6-471a-9436-4fd585fee753"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{
+  3.9283300503508587`*^9, {3.928330196226365*^9, 3.928330212547196*^9}, 
+   3.928414815313765*^9, 3.928422206545701*^9, {3.928422242643124*^9, 
+   3.928422248218362*^9}, {3.928423071584215*^9, 3.928423084618456*^9}, 
+   3.928423433006639*^9, 3.928485596565817*^9, 3.928485837509385*^9, 
+   3.9284858746103497`*^9, 3.9284860450633087`*^9, {3.928486398549893*^9, 
+   3.928486600123021*^9}, {3.928486632667753*^9, 3.928486732456994*^9}},
+ CellLabel->
+  "Out[1290]=",ExpressionUUID->"d9fc47ea-20b5-4592-9def-2c8cd6f9cf6e"],
+
+Cell[BoxData["\<\"model_list.md\"\>"], "Output",
+ CellChangeTimes->{
+  3.9283300503508587`*^9, {3.928330196226365*^9, 3.928330212547196*^9}, 
+   3.928414815313765*^9, 3.928422206545701*^9, {3.928422242643124*^9, 
+   3.928422248218362*^9}, {3.928423071584215*^9, 3.928423084618456*^9}, 
+   3.928423433006639*^9, 3.928485596565817*^9, 3.928485837509385*^9, 
+   3.9284858746103497`*^9, 3.9284860450633087`*^9, {3.928486398549893*^9, 
+   3.928486600123021*^9}, {3.928486632667753*^9, 3.92848673247266*^9}},
+ CellLabel->
+  "Out[1294]=",ExpressionUUID->"33e9de17-f8fc-4d2b-a7b8-58a62fffc42c"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"For", " ", "one"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ListName", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Name\>\"", ",", " ", "\"\<Description\>\"", ",", " ", 
+       "\"\<Trained Data\>\"", ",", " ", "\"\<Time\>\""}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"joinedList", " ", "=", " ", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+      "resourceNames", ",", " ", "resourceDescription", ",", " ", 
+       "resourceData", ",", "resourceReleaseDate"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", " ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ListName", " ", "->", "  ", "joinedList"}], " ", "//", " ", 
+    "Thread"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.9283274655662003`*^9, 3.928327523161545*^9}, {
+   3.928327679261745*^9, 3.9283277044614563`*^9}, {3.928327749452766*^9, 
+   3.928327783735424*^9}, 3.92832959224405*^9, {3.928330029218061*^9, 
+   3.9283300295983562`*^9}, {3.9284218385572147`*^9, 3.928421993805135*^9}, {
+   3.928422083136855*^9, 3.928422179690545*^9}, {3.928422216067919*^9, 
+   3.928422227040176*^9}, {3.928422697594821*^9, 3.928422712190268*^9}, 
+   3.928422753848371*^9, {3.928485664469337*^9, 
+   3.928485678435169*^9}},ExpressionUUID->"b4e0be0c-f650-4cd1-a15d-\
+b8cb56da0908"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\"\<Name\>\"", "\[Rule]", "\"\<LeNet \>\""}], ",", 
+   RowBox[{
+   "\"\<Description\>\"", "\[Rule]", 
+    "\"\<Identify the handwritten digit in an image\>\""}], ",", 
+   RowBox[{"\"\<Trained Data\>\"", "\[Rule]", "\"\<MNIST Data\>\""}], ",", 
+   RowBox[{"\"\<Time\>\"", "\[Rule]", "\"\<January 30, 2017\>\""}]}], 
+  "}"}]], "Input",
+ CellChangeTimes->{3.928423096523673*^9},
+ CellLabel->
+  "In[675]:=",ExpressionUUID->"30edbeba-6a91-493b-961f-a6dbb3d223dc"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"Name\"\>", "\[Rule]", "\<\"LeNet \"\>"}], ",", 
+   RowBox[{"\<\"Description\"\>", 
+    "\[Rule]", "\<\"Identify the handwritten digit in an image\"\>"}], ",", 
+   RowBox[{"\<\"Trained Data\"\>", "\[Rule]", "\<\"MNIST Data\"\>"}], ",", 
+   RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"January 30, 2017\"\>"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.928423096565063*^9},
+ CellLabel->
+  "Out[675]=",ExpressionUUID->"ae53a5ac-a065-45e9-9a45-c99e812b25ba"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"combineList", " ", "=", " ", 
+    RowBox[{"Thread", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "resourceNames", ",", " ", "resourceDescription", ",", " ", 
+       "resourceData", ",", " ", "resourceReleaseDate"}], "}"}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Function", " ", "to", " ", "create", " ", "associations"}], 
+   "*)"}], 
+  RowBox[{
+   RowBox[{"createAssociation", "[", 
+    RowBox[{"data_List", ",", "names_List"}], "]"}], ":=", 
+   RowBox[{"AssociationThread", "[", 
+    RowBox[{"names", "->", "data"}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Create", " ", "the", " ", "list", " ", "of", " ", "associations"}], 
+   "*)"}], 
+  RowBox[{"associations", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"createAssociation", "[", 
+      RowBox[{"#", ",", "ListName"}], "]"}], "&"}], "/@", 
+    "combineList"}]}]}]}], "Input",
+ CellChangeTimes->{{3.928422482343462*^9, 3.928422524947567*^9}, {
+  3.9284227578599663`*^9, 3.928422788265819*^9}, {3.928422828185864*^9, 
+  3.928422833488958*^9}, {3.928422885370427*^9, 3.928422905931086*^9}, {
+  3.928485645405745*^9, 3.9284856537163143`*^9}},
+ CellLabel->
+  "In[781]:=",ExpressionUUID->"2e73d098-7b72-41c8-bc13-43deecbfc9ec"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", "\[Rule]", "\<\"CapsNet \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Identify the handwritten digit in an image\"\>"}], ",", 
+     
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", "\<\"MNIST Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"March 26, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CenterNet Pose Estimation Nets \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Detect and localize human joints and objects in an \
+image\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", "\<\"MS-COCO Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"December 14, 2022\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", "\[Rule]", "\<\"CenterNet \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Detect and localize objects in an image\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", "\<\"MS-COCO Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"July 15, 2022\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"Channel-Separated Video Action Classification Net \
+\"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Identify the main action in a video\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", "\<\"Kinetics-400 Data\"\>"}],
+      ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"July 12, 2023\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"Clinical Concept Embeddings \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Represent a clinical concept as a vector\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", 
+      "\[Rule]", "\<\"Health Insurance Claims, Clinical Narratives from \
+Stanford and PubMed Journal Articles\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"June 20, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CLIP Multi-domain Feature Extractor\"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Represent words and images as vectors\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", 
+      RowBox[{"Missing", "[", 
+       RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"Data\"\>"}], "]"}]}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"April 10, 2023\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CoCa Image Captioning Nets \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Represent words and images as vectors\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", "\<\"LAION-2B Data\"\>"}], 
+     ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"October 27, 2023\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"Colorful Image Colorization \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Colorize a grayscale image\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", 
+      "\[Rule]", "\<\"ImageNet Competition Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 08, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"ColorNet Image Colorization \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Colorize a grayscale image\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", 
+      "\[Rule]", "\<\"ImageNet Competition Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"October 09, 2017\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"ColorNet Image Colorization \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Colorize a grayscale image\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", "\<\"Places Data\"\>"}], ",", 
+     
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"October 09, 2017\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"ConceptNet Numberbatch Word Vectors V17.06\"\>"}], ",", 
+     
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Represent words as vectors\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", 
+      RowBox[{"Missing", "[", 
+       RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"Data\"\>"}], "]"}]}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"January 23, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CREPE Pitch Detection Net \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Track the pitch of a monophonic signal\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", 
+      "\[Rule]", "\<\"Monophonic Signal Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"May 16, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Apple-to-Orange Translation \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn apples into oranges in a photo\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", 
+      "\[Rule]", "\<\"ImageNet Competition Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 05, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Horse-to-Zebra Translation \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn horses into zebras in a photo\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", 
+      "\[Rule]", "\<\"ImageNet Competition Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 12, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Monet-to-Photo Translation\"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn a Monet-style painting into a photo\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", 
+      RowBox[{"Missing", "[", 
+       RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"Data\"\>"}], "]"}]}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 12, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Orange-to-Apple Translation \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn oranges into apples in a photo\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", 
+      "\[Rule]", "\<\"ImageNet Competition Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 12, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Photo-to-Cezanne Translation\"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn a photo into a Cezanne-style painting\"\>"}], ",", 
+     
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", 
+      RowBox[{"Missing", "[", 
+       RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"Data\"\>"}], "]"}]}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 12, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Photo-to-Monet Translation\"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn a photo into a Monet-style painting\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", 
+      RowBox[{"Missing", "[", 
+       RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"Data\"\>"}], "]"}]}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 12, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Photo-to-Van Gogh Translation\"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn a photo into a Van Gogh-style painting\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", 
+      RowBox[{"Missing", "[", 
+       RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"Data\"\>"}], "]"}]}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 12, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Summer-to-Winter Translation\"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn a summertime photo into a wintertime photo\"\>"}], 
+     ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", 
+      RowBox[{"Missing", "[", 
+       RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"Data\"\>"}], "]"}]}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 12, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Winter-to-Summer Translation\"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn a wintertime photo into a summertime photo\"\>"}], 
+     ",", 
+     RowBox[{"\<\"Trained Data\"\>", "\[Rule]", 
+      RowBox[{"Missing", "[", 
+       RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"Data\"\>"}], "]"}]}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 12, 2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"Name\"\>", 
+      "\[Rule]", "\<\"CycleGAN Zebra-to-Horse Translation \"\>"}], ",", 
+     RowBox[{"\<\"Description\"\>", 
+      "\[Rule]", "\<\"Turn zebras into horses in a photo\"\>"}], ",", 
+     RowBox[{"\<\"Trained Data\"\>", 
+      "\[Rule]", "\<\"ImageNet Competition Data\"\>"}], ",", 
+     RowBox[{"\<\"Time\"\>", "\[Rule]", "\<\"February 12, 2018\"\>"}]}], 
+    "\[RightAssociation]"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.928422526702382*^9, 3.9284227911915827`*^9, 3.9284228344184103`*^9, {
+   3.9284228867099524`*^9, 3.928422907005302*^9}, {3.928423078380315*^9, 
+   3.928423102472948*^9}, 3.9284234379054737`*^9, 3.9284856870395613`*^9, 
+   3.928485844296973*^9, 3.9284858855988693`*^9, 3.928486053761039*^9},
+ CellLabel->
+  "Out[783]=",ExpressionUUID->"f21a26e7-6f94-48ae-8f55-bb5aa4c9376a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Function", " ", "to", " ", "convert", " ", "associations", " ", "to", " ",
+     "markdown"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"toMarkdown", "[", "assoc_", "]"}], ":=", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"\"\<### Model Name\\n\>\"", ",", "\"\<Name: \\\"\>\"", ",", 
+      RowBox[{"assoc", "[", "\"\<Name\>\"", "]"}], ",", "\"\<\\\"\\n\\n\>\"", 
+      ",", "\"\<### Description of the model\\n\>\"", ",", 
+      RowBox[{"assoc", "[", "\"\<Description\>\"", "]"}], ",", 
+      "\"\<\\n\\n\>\"", ",", "\"\<### Trained by Data\\n\>\"", ",", 
+      "\"\<DataSet: \\\"\>\"", ",", 
+      RowBox[{"Replace", "[", 
+       RowBox[{
+        RowBox[{"assoc", "[", "\"\<Trained Data\>\"", "]"}], ",", 
+        RowBox[{"_Missing", "->", "\"\<N/A\>\""}]}], "]"}], ",", 
+      "\"\<\\\"\\n\\n\>\"", ",", "\"\<### Time issued\\n\>\"", ",", 
+      RowBox[{"assoc", "[", "\"\<Time\>\"", "]"}], ",", "\"\<\\n\\n\>\"", 
+      ",", "\"\<---\\n\>\""}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Convert", " ", "all", " ", "associations", " ", "to", " ", "markdown"}], 
+    "*)"}], 
+   RowBox[{
+    RowBox[{"markdownContent", "=", 
+     RowBox[{"StringJoin", "[", 
+      RowBox[{"\"\<## Model List\\n\\n\>\"", ",", 
+       RowBox[{"StringJoin", "@@", 
+        RowBox[{"(", 
+         RowBox[{"toMarkdown", "/@", "associations"}], ")"}]}]}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Save", " ", "the", " ", "markdown", " ", "content", " ", "to", " ", "a", 
+     " ", "file"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\<model_list.md\>\"", ",", "markdownContent", ",", "\"\<Text\>\""}], 
+     "]"}], "*)"}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Append", " ", "the", " ", "markdown", " ", "content", " ", "to", " ", 
+     "the", " ", "existing", " ", "file"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fileName", "=", "\"\<model_list.md\>\""}], ";"}], "\n", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"FileExistsQ", "[", "fileName", "]"}], ",", 
+     RowBox[{"Export", "[", 
+      RowBox[{"fileName", ",", 
+       RowBox[{
+        RowBox[{"Import", "[", 
+         RowBox[{"fileName", ",", "\"\<Text\>\""}], "]"}], "<>", 
+        "markdownContent"}], ",", "\"\<Text\>\""}], "]"}], ",", 
+     RowBox[{"Export", "[", 
+      RowBox[{"fileName", ",", "markdownContent", ",", "\"\<Text\>\""}], 
+      "]"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.928423392238537*^9, 3.928423405020968*^9}, {
+   3.928485806477207*^9, 3.9284858197246733`*^9}, 3.928486351631806*^9},
+ CellLabel->
+  "In[796]:=",ExpressionUUID->"bad1d496-8aae-42b8-a36c-49c24282b233"],
+
+Cell[BoxData["\<\"model_list.md\"\>"], "Output",
+ CellChangeTimes->{{3.928423412929639*^9, 3.92842344061097*^9}, 
+   3.928485690499804*^9, 3.928485847673314*^9, 3.928485889897032*^9, 
+   3.928486058987053*^9, 3.928486167998871*^9, {3.9284863534784193`*^9, 
+   3.928486366674666*^9}},
+ CellLabel->
+  "Out[799]=",ExpressionUUID->"6e1aa2a0-ea99-4ab2-b7e1-ce34754fc34c"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "\"\<model_list.md\>\"", "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->
+  "In[736]:=",ExpressionUUID->"4b9dc46c-7e2c-4167-9eb8-450780131785"],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "\"\<model_list.md\>\"", "]"}]], "Input",
+ NumberMarks->False,
+ CellLabel->
+  "In[718]:=",ExpressionUUID->"cbb639ee-93bf-4852-95a7-3668c5d73332"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"resourceData", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Cases", "[", 
+      RowBox[{"resourceLetter", ",", 
+       RowBox[{"_Association", "?", 
+        RowBox[{"(", 
+         RowBox[{"KeyExistsQ", "[", "\"\<Name\>\"", "]"}], ")"}]}], ",", 
+       "Infinity"}], "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", " ", "\"\<Description\>\""}], "]"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"2", ";;", " ", ";;", "2"}], "]"}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "resourceData", 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.928328624984687*^9, 3.928328636873602*^9}, {
+  3.928329120821138*^9, 3.928329275816049*^9}, {3.928329368350812*^9, 
+  3.928329409454537*^9}, {3.928329516669467*^9, 3.928329527934763*^9}, {
+  3.9283296320181913`*^9, 3.928329675417777*^9}, {3.92832993071122*^9, 
+  3.928329959480393*^9}},
+ CellLabel->
+  "In[457]:=",ExpressionUUID->"b58c4d8c-6652-4d32-8d33-b4e38c39dba3"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Identify the handwritten digit in an image\"\>", 
+   ",", "\<\"Detect and localize human joints and objects in an image\"\>", 
+   ",", "\<\"Detect and localize objects in an image\"\>", 
+   ",", "\<\"Identify the main action in a video\"\>", 
+   ",", "\<\"Represent a clinical concept as a vector\"\>", 
+   ",", "\<\"Represent words and images as vectors\"\>", 
+   ",", "\<\"Represent words and images as vectors\"\>", 
+   ",", "\<\"Colorize a grayscale image\"\>", 
+   ",", "\<\"Colorize a grayscale image\"\>", 
+   ",", "\<\"Colorize a grayscale image\"\>", 
+   ",", "\<\"Represent words as vectors\"\>", 
+   ",", "\<\"Track the pitch of a monophonic signal\"\>", 
+   ",", "\<\"Turn apples into oranges in a photo\"\>", 
+   ",", "\<\"Turn horses into zebras in a photo\"\>", 
+   ",", "\<\"Turn a Monet-style painting into a photo\"\>", 
+   ",", "\<\"Turn oranges into apples in a photo\"\>", 
+   ",", "\<\"Turn a photo into a Cezanne-style painting\"\>", 
+   ",", "\<\"Turn a photo into a Monet-style painting\"\>", 
+   ",", "\<\"Turn a photo into a Van Gogh-style painting\"\>", 
+   ",", "\<\"Turn a summertime photo into a wintertime photo\"\>", 
+   ",", "\<\"Turn a wintertime photo into a summertime photo\"\>", 
+   ",", "\<\"Turn zebras into horses in a photo\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9283286263693123`*^9, 3.928328637392331*^9}, {
+   3.928329124367051*^9, 3.928329218171318*^9}, {3.9283292554271383`*^9, 
+   3.92832927639073*^9}, {3.928329363137869*^9, 3.9283294097566032`*^9}, {
+   3.928329517511183*^9, 3.928329528493382*^9}, {3.92832964507979*^9, 
+   3.928329651724676*^9}, 3.928329765632592*^9, {3.9283299346659393`*^9, 
+   3.928329959792019*^9}},
+ CellLabel->
+  "Out[457]=",ExpressionUUID->"27672568-cdb7-4174-ba10-ca6d1f8a18cf"],
+
+Cell[BoxData["22"], "Output",
+ CellChangeTimes->{{3.9283286263693123`*^9, 3.928328637392331*^9}, {
+   3.928329124367051*^9, 3.928329218171318*^9}, {3.9283292554271383`*^9, 
+   3.92832927639073*^9}, {3.928329363137869*^9, 3.9283294097566032`*^9}, {
+   3.928329517511183*^9, 3.928329528493382*^9}, {3.92832964507979*^9, 
+   3.928329651724676*^9}, 3.928329765632592*^9, {3.9283299346659393`*^9, 
+   3.928329959814434*^9}},
+ CellLabel->
+  "Out[458]=",ExpressionUUID->"58f8c719-6f50-4e2a-90e9-50509c067c23"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tool", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"LLMResourceTool", "[", "\"\<DocumentationLookup\>\"", "]"}], "[", 
+   "\"\<https://resources.wolframcloud.com/NeuralNetRepository/resources/BERT-\
+Trained-on-BookCorpus-and-Wikipedia-Data/\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.928412158055892*^9, 3.928412189010419*^9}, {
+  3.928413898308346*^9, 3.9284139116738167`*^9}, {3.928414062626964*^9, 
+  3.928414064245036*^9}},
+ CellLabel->
+  "In[553]:=",ExpressionUUID->"910772b9-a730-4e75-b28f-32202ce9f3e3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["LLMTool",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"documentation_lookup\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"Get documentation pages for Wolfram Language symbols.\"", 
+                  "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"documentation_lookup\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"Get documentation pages for Wolfram Language symbols.\"", 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Function: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "Wolfram`Chatbook`Tools`Private`documentationLookup", 
+                  "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  LLMTool[<|
+   "CanonicalName" -> "DocumentationLookup", "DisplayName" -> 
+    "Documentation Lookup", "Name" -> "documentation_lookup", "Icon" -> 
+    RawBoxes[
+      TemplateBox[{}, "ToolIconDocumentationLookup"]], "Description" -> 
+    "Get documentation pages for Wolfram Language symbols.", "Function" -> 
+    Wolfram`Chatbook`Tools`Private`documentationLookup, "FormattingFunction" -> 
+    Wolfram`Chatbook`Formatting`toolAutoFormatter, "Source" -> "BuiltIn", 
+    "Parameters" -> {
+     "names" -> <|
+       "Interpreter" -> DelimitedSequence["WolframLanguageSymbol", ","], 
+        "Help" -> "One or more Wolfram Language symbols separated by commas", 
+        "Required" -> True|>}|>, {}],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.928412188371743*^9, 3.928412189751153*^9}, 
+   3.928412619821062*^9, 3.9284139123738127`*^9, 3.928414064627941*^9},
+ CellLabel->
+  "Out[553]=",ExpressionUUID->"d69bd15d-e0c6-45c4-af87-38bc72acdff8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tool", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"LLMResourceTool", "[", "\"\<ImportFile\>\"", "]"}], "[", 
+   RowBox[{"<|", 
+    RowBox[{"\"\<Directory\>\"", "->", "\"\<jsonData.json\>\""}], "|>"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.9284177624620323`*^9, 3.928417807792739*^9}, {
+  3.928417958348604*^9, 3.92841799316148*^9}, {3.928419163887418*^9, 
+  3.928419175941743*^9}, {3.928419394529161*^9, 3.928419448741727*^9}},
+ CellLabel->
+  "In[585]:=",ExpressionUUID->"d564c0ec-fc25-4dc2-9b82-438b725b6642"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["LLMTool",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"ImportFile\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"ImportFile\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Function: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"Enclose", "[", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    
+                    RowBox[{
+                    "{", "LLMToolRepositoryTemporary`resolvedPath", "}"}], 
+                    ",", 
+                    RowBox[{
+                    RowBox[{"LLMToolRepositoryTemporary`resolvedPath", "=", 
+                    RowBox[{"FileNameJoin", "[", 
+                    RowBox[{"DeleteCases", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"\"jsonData.json\"", ",", "#path"}], "}"}], ",", 
+                    "None"}], "]"}], "]"}]}], ";", 
+                    RowBox[{"StringTake", "[", 
+                    RowBox[{
+                    RowBox[{"Confirm", "[", 
+                    RowBox[{"Import", "[", 
+                    
+                    RowBox[{"LLMToolRepositoryTemporary`resolvedPath", ",", 
+                    "\"Text\""}], "]"}], "]"}], ",", "All"}], "]"}]}]}], 
+                    "]"}], "]"}], "&"}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  LLMTool[<|
+   "Name" -> "ImportFile", "Description" -> "", 
+    "Parameters" -> {
+     "path" -> <|
+       "Interpreter" -> "String", "Help" -> Missing["NotSpecified"], 
+        "Required" -> True|>}, "Function" -> (Enclose[
+      Module[{LLMToolRepositoryTemporary`resolvedPath}, 
+       LLMToolRepositoryTemporary`resolvedPath = FileNameJoin[
+          DeleteCases[{"jsonData.json", 
+            Slot["path"]}, None]]; StringTake[
+         Confirm[
+          Import[LLMToolRepositoryTemporary`resolvedPath, "Text"]], 
+         All]]]& )|>, {}],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.928417998700753*^9, 3.928419179873691*^9, 
+  3.9284194498113136`*^9},
+ CellLabel->
+  "Out[585]=",ExpressionUUID->"7d30bbe5-6ef0-4696-9df3-75b48a913da8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"conversation", "=", 
+  RowBox[{"LLMSynthesize", "[", 
+   RowBox[{
+   "\"\<You are an expert on Machine Learning and Deep Learning. Here the \
+model_list.md is provided you have to read it first where contians ML models \
+info. You will choose the 3 best fit models from the jsonData listed for my \
+case. My case is I have lots of images about human face that ready to \
+classfied.\>\"", ",", 
+    RowBox[{"LLMEvaluator", "->", " ", 
+     RowBox[{"<|", 
+      RowBox[{"\"\<Tools\>\"", "->", 
+       RowBox[{
+        RowBox[{"LLMResourceTool", "[", "\"\<ImportFile\>\"", "]"}], "[", 
+        RowBox[{"<|", 
+         RowBox[{"\"\<MaxLength\>\"", " ", "->", " ", "8000"}], "|>"}], 
+        "]"}]}], "|>"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.928418020182457*^9, 3.928418091827154*^9}, {
+  3.928419210307406*^9, 3.928419219686371*^9}, {3.928419273942596*^9, 
+  3.9284192928968*^9}, {3.928419329859921*^9, 3.928419338233519*^9}, {
+  3.928419523666423*^9, 3.9284195641517982`*^9}, {3.9284196007693987`*^9, 
+  3.9284196753500137`*^9}, {3.9284197467526407`*^9, 3.9284199858206043`*^9}, {
+  3.928420029556645*^9, 3.928420042746299*^9}, {3.928420407900354*^9, 
+  3.9284204100604773`*^9}, {3.928420534611944*^9, 3.928420561023097*^9}, {
+  3.928488000594822*^9, 3.928488028266274*^9}},
+ CellLabel->
+  "In[1295]:=",ExpressionUUID->"399c3098-6c28-4f75-aea1-278ed9b6c66a"],
+
+Cell[BoxData["\<\"First, I will read the model_list.md file. I will use the \
+ImportFile tool to obtain the data stored in this file.\\n\\nUpon reviewing \
+the provided model list, we can see that multiple models have the potential \
+to be useful for your objective. It seems that these three models could be \
+the most fitting due to their training and features:\\n\\n1. **2D Face \
+Alignment Net**: This model is designed to determine the locations of \
+keypoints from a facial image. Trained on 300W Large Pose Data can be \
+beneficial for detecting specific features in faces like eyes, nostrils, \
+lips, etc. The accurate detection would further aid the classification \
+process.\\n\\n2. **3D Face Alignment Net**: This model takes face detection a \
+step further by providing a 2D projection of 3D keypoints from a facial \
+image. This could be especially valuable if the images you have vary in \
+angles or if you need to classify based on depth features. This model was \
+also trained on 300W Large Pose Data, enhancing its efficacy for \
+face-oriented tasks.\\n\\n3. **Age Estimation VGG-16**: Trained on IMDB-WIKI \
+and Looking at People Data, this model is designed to predict a person's age \
+from an image of their face. Depending on your classification needs, the \
+rapid age estimation could be a valuable feature.\\n\\nRemember, the \
+appropriateness of a model also heavily depends on the specifics of the task \
+- the nature of classes, the required accuracy, available computational \
+resources, and the amount of data available for training. So, you might need \
+to perform some experiments or potentially employ an ensemble of various \
+models to achieve the best results.\"\>"], "Output",
+ CellChangeTimes->{3.928418108547851*^9, 3.928419310536491*^9, 
+  3.928419341496457*^9, 3.928419569156375*^9, 3.9284196217865877`*^9, 
+  3.9284196896908817`*^9, 3.928420004444639*^9, 3.9284200641766977`*^9, 
+  3.928420426419174*^9, 3.928420577977117*^9, 3.92848804964277*^9},
+ CellLabel->
+  "Out[1295]=",ExpressionUUID->"89886222-356a-4622-978f-62634691909c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{
+  "\"\<https://resources.wolframcloud.com/NeuralNetRepository/resources/BERT-\
+Trained-on-BookCorpus-and-Wikipedia-Data/\>\"", ",", "\"\<Elements\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.928488463122059*^9, 3.928488476153905*^9}, {
+  3.928489416534916*^9, 3.928489418066887*^9}},
+ CellLabel->
+  "In[1308]:=",ExpressionUUID->"7a1a7a3b-f723-4bcf-9a6c-2f699b2b8e24"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Data\"\>", ",", "\<\"FullData\"\>", ",", "\<\"Hyperlinks\"\>", 
+   ",", "\<\"ImageLinks\"\>", ",", "\<\"Images\"\>", ",", "\<\"Plaintext\"\>",
+    ",", "\<\"Source\"\>", ",", "\<\"Summary\"\>", ",", "\<\"Title\"\>", 
+   ",", "\<\"XMLObject\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.9284894190091267`*^9},
+ CellLabel->
+  "Out[1308]=",ExpressionUUID->"23f2e313-6dd1-4bde-a1cc-af2b49ba0e47"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{
+  "\"\<https://resources.wolframcloud.com/NeuralNetRepository/resources/BERT-\
+Trained-on-BookCorpus-and-Wikipedia-Data/\>\"", ",", "\"\<XMLObject\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.928489033155697*^9, 3.9284890347914543`*^9}, {
+  3.928489115738378*^9, 3.928489133469589*^9}, {3.928489430453269*^9, 
+  3.928489471510405*^9}, {3.928489520042194*^9, 3.928489525990834*^9}},
+ CellLabel->
+  "In[1312]:=",ExpressionUUID->"e48fa588-3d8f-4bf0-a1ed-a00e01b4179d"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{
+       RowBox[{"XMLObject", "[", "\"Document\"", "]"}], "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{
+             RowBox[{"XMLObject", "[", "\"Declaration\"", "]"}], "[", 
+             RowBox[{
+               RowBox[{"\"Version\"", "\[Rule]", "\"1.0\""}], ",", 
+               RowBox[{"\"Standalone\"", "\[Rule]", "\"yes\""}]}], "]"}], 
+           "}"}], ",", 
+         RowBox[{"XMLElement", "[", 
+           RowBox[{"\"html\"", ",", 
+             RowBox[{"{", 
+               RowBox[{
+                 RowBox[{"\"lang\"", "\[Rule]", "\"en\""}], ",", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    TemplateBox[{"1"}, "OutputSizeLimit`Skeleton"], "}"}], 
+                   "\[Rule]", 
+                   TemplateBox[{"30"}, "OutputSizeLimit`Skeleton"]}]}], "}"}],
+              ",", 
+             RowBox[{"{", 
+               RowBox[{
+                 RowBox[{"XMLElement", "[", 
+                   RowBox[{"\"head\"", ",", 
+                    RowBox[{"{", "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"XMLElement", "[", 
+                    RowBox[{"\"meta\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"charset\"", "\[Rule]", "\"UTF-8\""}], "}"}], 
+                    ",", 
+                    RowBox[{"{", "}"}]}], "]"}], ",", 
+                    RowBox[{"XMLElement", "[", 
+                    RowBox[{"\"meta\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    
+                    RowBox[{"\"http-equiv\"", "\[Rule]", 
+                    "\"X-UA-Compatible\""}], ",", 
+                    RowBox[{"\"content\"", "\[Rule]", "\"IE=edge\""}]}], 
+                    "}"}], ",", 
+                    RowBox[{"{", "}"}]}], "]"}], ",", 
+                    RowBox[{"XMLElement", "[", 
+                    RowBox[{"\"meta\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\"name\"", "\[Rule]", "\"viewport\""}], ",", 
+                    
+                    RowBox[{"\"content\"", "\[Rule]", 
+                    "\"width=device-width, initial-scale=1\""}]}], "}"}], ",", 
+                    RowBox[{"{", "}"}]}], "]"}], ",", 
+                    RowBox[{"XMLElement", "[", 
+                    RowBox[{"\"meta\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\"name\"", "\[Rule]", "\"ssi-loaded\""}], ",", 
+                    RowBox[{"\"content\"", "\[Rule]", "\"true\""}]}], "}"}], 
+                    ",", 
+                    RowBox[{"{", "}"}]}], "]"}], ",", 
+                    TemplateBox[{"16"}, "OutputSizeLimit`Skeleton"], ",", 
+                    RowBox[{"XMLElement", "[", 
+                    RowBox[{"\"link\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\"rel\"", "\[Rule]", "\"stylesheet\""}], ",", 
+                    
+                    RowBox[{"\"href\"", "\[Rule]", 
+                    "\"https://www.wolframcloud.com/obj/resourcesystem/\
+webresources/resourcesystem/5.0.0/shingle.css\""}]}], "}"}], ",", 
+                    RowBox[{"{", "}"}]}], "]"}], ",", 
+                    RowBox[{"XMLElement", "[", 
+                    RowBox[{"\"link\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\"rel\"", "\[Rule]", "\"stylesheet\""}], ",", 
+                    
+                    RowBox[{"\"href\"", "\[Rule]", 
+                    "\"https://www.wolframcloud.com/obj/resourcesystem/\
+webresources/resourcesystem/5.0.0/header-and-results.css\""}]}], "}"}], ",", 
+                    RowBox[{"{", "}"}]}], "]"}], ",", 
+                    RowBox[{"XMLElement", "[", 
+                    RowBox[{"\"link\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\"rel\"", "\[Rule]", "\"stylesheet\""}], ",", 
+                    
+                    RowBox[{"\"href\"", "\[Rule]", 
+                    "\"https://www.wolframcloud.com/obj/resourcesystem/\
+webresources/NeuralNetRepository/5.0.0/main.css\""}]}], "}"}], ",", 
+                    RowBox[{"{", "}"}]}], "]"}]}], "}"}]}], "]"}], ",", 
+                 RowBox[{"XMLElement", "[", 
+                   RowBox[{"\"body\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"id\"", "\[Rule]", "\"shingle\""}], "}"}], ",", 
+                    
+                    RowBox[{"{", 
+                    RowBox[{"\"\\n    \"", ",", 
+                    TemplateBox[{"23"}, "OutputSizeLimit`Skeleton"], ",", 
+                    "\"\\n    \\n  \""}], "}"}]}], "]"}]}], "}"}]}], "]"}], 
+         ",", 
+         RowBox[{"{", "}"}]}], "]"}], Short[#, 16]& ], "line" -> 1312, 
+   "sessionID" -> 31684713363444556821, "byteCount" -> 355472, "size" -> 16, 
+   "stored" -> False, "expr" -> Missing["NotAvailable", "NewSessionID"], 
+   "wrap" -> OutputSizeLimit`Defer, "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{
+  3.928489035938885*^9, {3.928489125318199*^9, 3.928489134244641*^9}, {
+   3.928489436998003*^9, 3.928489481497453*^9}, 3.928489526708727*^9},
+ CellLabel->
+  "Out[1312]=",ExpressionUUID->"a5d27590-ae9c-411c-987a-2ae266ee9c84"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"nb", " ", "=", " ", 
+   RowBox[{"URLRead", "[", 
+    RowBox[{
+    "\"\<https://resources.wolframcloud.com/NeuralNetRepository/resources/\
+BERT-Trained-on-BookCorpus-and-Wikipedia-Data/\>\"", ",", " ", 
+     "\"\<Body\>\""}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{
+  3.928489050680566*^9, {3.9284890897037287`*^9, 3.9284891007938004`*^9}, {
+   3.928489546436172*^9, 3.9284895589045477`*^9}, {3.928489596647582*^9, 
+   3.928489602197175*^9}, {3.928490063676382*^9, 3.928490067877922*^9}, 
+   3.9284901042855062`*^9, 3.9284904643152647`*^9},
+ CellLabel->
+  "In[1320]:=",ExpressionUUID->"0429f659-c74e-4f8e-a376-f29bf21fe5c4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"section", "=", 
+  RowBox[{"StringCases", "[", 
+   RowBox[{"nb", ",", 
+    RowBox[{
+     RowBox[{
+     "StartOfString", "~~", "___", "~~", 
+      "\"\<<div class=\\\"example-notebook\\\">\>\"", "~~", 
+      RowBox[{"inner", ":", 
+       RowBox[{"Shortest", "[", "___", "]"}]}], "~~", "\"\<</div>\>\"", "~~", 
+      "___"}], ":>", "inner"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.928490079231977*^9, 3.9284900883421583`*^9}},
+ CellLabel->
+  "In[1318]:=",ExpressionUUID->"0cba8cbd-baba-4129-a174-c6ffafc35f29"],
+
+Cell[BoxData[
+ RowBox[{"{", "\<\"<div class=\\\"subsection cell-group\\\"><h3>Resource \
+retrieval</h3><p class=\\\"example-text\\\">Get the pre-trained net:</p><div \
+class=\\\"example-frame\\\"><table class=\\\"example input\\\"><tr><td class=\
+\\\"in-out\\\">In[1]:=</td><td><div class=\\\"img-frame\\\"><img \
+src=\\\"https://www.wolframcloud.com/obj/resourcesystem/images/ea7/ea758ad7-\
+0944-481e-a6a1-205ab1ac8a7d/1f86430507772b92.png\\\" \
+alt=\\\"NetModel[&quot;BERT Trained on BookCorpus and Wikipedia Data&quot;]\\\
+\" width=\\\"390\\\" height=\\\"19\\\" style=\\\"width: 24.3750em; height: \
+1.1875em;\\\"/>\"\>", "}"}]], "Output",
+ CellChangeTimes->{3.928490088856592*^9},
+ CellLabel->
+  "Out[1318]=",ExpressionUUID->"d5324147-75dd-42b9-8608-9513477509a7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"n", "=", 
+  RowBox[{
+  "Import", "[", 
+   "\"\<https://www.wolframcloud.com/download/42cfa376-f107-490a-8a60-\
+6d8fc79b299e?extension=always&filename=BERT-Trained-on-BookCorpus-and-\
+Wikipedia-Data\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.928488518326811*^9, 3.928488551175294*^9}},
+ CellLabel->
+  "In[1298]:=",ExpressionUUID->"e2fabee3-1f3f-48ca-8871-9e57168fcbf1"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{"Notebook", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"Cell", "[", 
+             RowBox[{"CellGroupData", "[", 
+               RowBox[{
+                 RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{
+                    RowBox[{"TextData", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"StyleBox", "[", 
+                    RowBox[{"\"Construction Notebook for:\"", ",", 
+                    RowBox[{"FontSize", "\[Rule]", "24"}]}], "]"}], ",", 
+                    "\"\\nBERT Trained on BookCorpus and Wikipedia Data\""}], 
+                    "}"}], "]"}], ",", "\"Title\"", ",", 
+                    RowBox[{"CellChangeTimes", "\[Rule]", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.703596290184906`*^9", ",", 
+                    "3.704015777970223`*^9", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.7112829422331343`*^9", ",", 
+                    "3.71128294621737`*^9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.759063852165167`*^9", ",", 
+                    "3.759063852467972`*^9"}], "}"}], ",", 
+                    "3.760082541657879`*^9", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.760084783168932`*^9", ",", 
+                    "3.760084783873008`*^9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.760976072757799`*^9", ",", 
+                    "3.760976073508733`*^9"}], "}"}], ",", 
+                    "3.763380994552088`*^9", ",", "3.7970812599393682`*^9"}], 
+                    "}"}]}], ",", 
+                    
+                    RowBox[{
+                    "ExpressionUUID", "\[Rule]", 
+                    "\"a33618b8-7416-413f-9875-525e49421225\""}]}], "]"}], 
+                    ",", 
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"CellGroupData", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"\"NetModel Access\"", ",", "\"Subsection\"", ",", 
+                    
+                    RowBox[{"ExpressionUUID", "\[Rule]", 
+                    "\"05498e76-0a7f-48f3-8742-2a22e96acb4d\""}]}], "]"}], 
+                    ",", 
+                    TemplateBox[{"3"}, "OutputSizeLimit`Skeleton"]}], "}"}], 
+                    ",", "Open"}], "]"}], "]"}], ",", 
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"CellGroupData", "[", 
+                    TemplateBox[{"1"}, "OutputSizeLimit`Skeleton"], "]"}], 
+                    "]"}], ",", 
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"CellGroupData", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"\"Training\"", ",", "\"Section\"", ",", 
+                    
+                    RowBox[{"ExpressionUUID", "\[Rule]", 
+                    "\"77cc71e7-c40d-420d-8050-3de316a83d0a\""}]}], "]"}], 
+                    ",", 
+                    RowBox[{"Cell", "[", 
+                    
+                    RowBox[{"\"(Performed separately)\"", ",", "\"Text\"", 
+                    ",", 
+                    RowBox[{"CellChangeTimes", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.703671715995969`*^9", ",", 
+                    "3.703671721081246`*^9"}], "}"}], "}"}]}], ",", 
+                    
+                    RowBox[{"ExpressionUUID", "\[Rule]", 
+                    "\"799c8263-2b8e-4167-841b-78a369bf1d15\""}]}], "]"}]}], 
+                    "}"}], ",", "Open"}], "]"}], "]"}]}], "}"}], ",", 
+                 "Open"}], "]"}], "]"}], "}"}], ",", 
+         TemplateBox[{"4"}, "OutputSizeLimit`Skeleton"], ",", 
+         TemplateBox[{"1"}, "OutputSizeLimit`Skeleton"]}], "]"}], 
+     Short[#, 16]& ], "line" -> 1298, "sessionID" -> 31684713363444556821, 
+   "byteCount" -> 1062584, "size" -> 16, "stored" -> False, "expr" -> 
+   Missing["NotAvailable", "NewSessionID"], "wrap" -> OutputSizeLimit`Defer, 
+   "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{{3.928488538825407*^9, 3.928488553149716*^9}},
+ CellLabel->
+  "Out[1298]=",ExpressionUUID->"a46b8842-96c8-4c04-8bfb-ec3a8ecee1ff"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NotebookRead", "[", 
+  RowBox[{"n", ",", "\"\<\>\""}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.928488556711341*^9, {3.928488926891849*^9, 
+   3.928488965740169*^9}},ExpressionUUID->"476986cb-ad2a-4332-94c2-\
+7beff8fc8eec"],
+
+Cell[BoxData[
+ TemplateBox[<|"shortenedBoxes" -> TagBox[
+     RowBox[{"NotebookRead", "[", 
+       RowBox[{"Notebook", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"Cell", "[", 
+               RowBox[{"CellGroupData", "[", 
+                 RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{
+                    RowBox[{"TextData", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"StyleBox", "[", 
+                    RowBox[{"\"Construction Notebook for:\"", ",", 
+                    RowBox[{"FontSize", "\[Rule]", "24"}]}], "]"}], ",", 
+                    "\"\\nBERT Trained on BookCorpus and Wikipedia Data\""}], 
+                    "}"}], "]"}], ",", "\"Title\"", ",", 
+                    RowBox[{"CellChangeTimes", "\[Rule]", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.703596290184906`*^9", ",", 
+                    "3.704015777970223`*^9", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.7112829422331343`*^9", ",", 
+                    "3.71128294621737`*^9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.759063852165167`*^9", ",", 
+                    "3.759063852467972`*^9"}], "}"}], ",", 
+                    "3.760082541657879`*^9", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.760084783168932`*^9", ",", 
+                    "3.760084783873008`*^9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.760976072757799`*^9", ",", 
+                    "3.760976073508733`*^9"}], "}"}], ",", 
+                    "3.763380994552088`*^9", ",", "3.7970812599393682`*^9"}], 
+                    "}"}]}], ",", 
+                    
+                    RowBox[{"ExpressionUUID", "\[Rule]", 
+                    "\"a33618b8-7416-413f-9875-525e49421225\""}]}], "]"}], 
+                    ",", 
+                    RowBox[{"Cell", "[", 
+                    TemplateBox[{"1"}, "OutputSizeLimit`Skeleton"], "]"}], 
+                    ",", 
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"CellGroupData", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"\"Net Construction\"", ",", "\"Section\"", ",", 
+                    RowBox[{"ExpressionUUID", "\[Rule]", 
+                    
+                    RowBox[{"\"cd545e68-f\"", "\[Ellipsis]", 
+                    "\"d64aedca73\""}]}]}], "]"}], ",", 
+                    TemplateBox[{"1"}, "OutputSizeLimit`Skeleton"], ",", 
+                    RowBox[{"Cell", "[", 
+                    TemplateBox[{"1"}, "OutputSizeLimit`Skeleton"], "]"}]}], 
+                    "}"}], ",", 
+                    TemplateBox[{"4"}, "OutputSizeLimit`Skeleton"]}], "]"}], 
+                    "]"}], ",", 
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"CellGroupData", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"\"Training\"", ",", "\"Section\"", ",", 
+                    
+                    RowBox[{"ExpressionUUID", "\[Rule]", 
+                    "\"77cc71e7-c40d-420d-8050-3de316a83d0a\""}]}], "]"}], 
+                    ",", 
+                    RowBox[{"Cell", "[", 
+                    
+                    RowBox[{"\"(Performed separately)\"", ",", "\"Text\"", 
+                    ",", 
+                    RowBox[{"CellChangeTimes", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"3.703671715995969`*^9", ",", 
+                    "3.703671721081246`*^9"}], "}"}], "}"}]}], ",", 
+                    
+                    RowBox[{"ExpressionUUID", "\[Rule]", 
+                    "\"799c8263-2b8e-4167-841b-78a369bf1d15\""}]}], "]"}]}], 
+                    "}"}], ",", "Open"}], "]"}], "]"}]}], "}"}], ",", 
+                   "Open"}], "]"}], "]"}], "}"}], ",", 
+           TemplateBox[{"4"}, "OutputSizeLimit`Skeleton"], ",", 
+           TemplateBox[{"1"}, "OutputSizeLimit`Skeleton"]}], "]"}], "]"}], 
+     Short[#, 16]& ], "line" -> 1301, "sessionID" -> 31684713363444556821, 
+   "byteCount" -> 1062632, "size" -> 16, "stored" -> False, "expr" -> 
+   Missing["NotAvailable", "NewSessionID"], "wrap" -> OutputSizeLimit`Defer, 
+   "version" -> 1|>,
+  "OutputSizeLimitTemplate"]], "Output",
+ CellChangeTimes->{{3.928488937109754*^9, 3.928488955885871*^9}},
+ CellLabel->
+  "Out[1301]=",ExpressionUUID->"ceb4e09a-6c0f-4e48-8f13-6643803a8589"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9284885679157457`*^9, 3.9284885718149223`*^9}, 
+   3.928488742829548*^9},ExpressionUUID->"8ee4285c-7829-418d-8c18-\
+c54ad30877a1"],
+
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{
+  "\"\<https://www.wolframcloud.com/download/42cfa376-f107-490a-8a60-\
+6d8fc79b299e?extension=always&filename=BERT-Trained-on-BookCorpus-and-\
+Wikipedia-Data\>\"", ",", "\"\<Text\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.928488765460397*^9, 3.928488768052093*^9}},
+ CellLabel->
+  "In[1299]:=",ExpressionUUID->"ee47156e-6f6c-48ae-8e94-3e2ff7d867bd"]
+},
+WindowSize->{760, 841},
+WindowMargins->{{196, Automatic}, {Automatic, 4}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"dad925c0-c2e7-4d5a-b86a-588c735e2b5d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 279, 5, 30, "Input",ExpressionUUID->"d3387619-14b7-47e1-acfc-13717dbf9540"],
+Cell[862, 29, 217, 3, 34, "Output",ExpressionUUID->"e0daa211-f325-4c2f-8e37-46dc11c44f27"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1116, 37, 394, 6, 30, "Input",ExpressionUUID->"97fb82f5-dce1-4f62-8635-b073990c1d12"],
+Cell[1513, 45, 383, 9, 28, "Message",ExpressionUUID->"eff1aac3-fb8c-4b9c-92db-7700d5b6de20"]
+}, Open  ]],
+Cell[1911, 57, 348, 6, 30, "Input",ExpressionUUID->"ae880b35-93a2-4166-b0f7-a6f956da02f2"],
+Cell[2262, 65, 386, 6, 52, "Input",ExpressionUUID->"bfe25212-0a1e-4363-9c1c-50d72082d01b"],
+Cell[2651, 73, 514, 12, 94, "Input",ExpressionUUID->"a0ac8c4f-dba3-48a6-aa81-85c9cacd28ae"],
+Cell[CellGroupData[{
+Cell[3190, 89, 923, 22, 157, "Input",ExpressionUUID->"15ab8506-6b45-4e72-b6f3-d1d637a99f62"],
+Cell[4116, 113, 272, 4, 34, "Output",ExpressionUUID->"c87095d2-ff53-4998-bda7-c5a7b8bd1f9c"]
+}, Open  ]],
+Cell[4403, 120, 187, 4, 30, "Input",ExpressionUUID->"2a6ccad2-46e4-4059-ad7a-e57457d7bb94"],
+Cell[4593, 126, 187, 4, 30, "Input",ExpressionUUID->"b4752a5c-1f70-4e9c-9756-cd5ac6bb3c91"],
+Cell[CellGroupData[{
+Cell[4805, 134, 9321, 216, 1270, "Input",ExpressionUUID->"ff8e6d87-b017-4f38-b5d6-4cc008fee586"],
+Cell[14129, 352, 574, 9, 34, "Output",ExpressionUUID->"bf3f9a27-fa56-47bd-a19a-0705f9e51f92"],
+Cell[14706, 363, 754, 14, 24, "Print",ExpressionUUID->"47f0e444-7313-4714-8b41-24a12811c079"],
+Cell[15463, 379, 584, 10, 34, "Output",ExpressionUUID->"76be4c6f-5a14-47e2-9813-00636a38c780"],
+Cell[16050, 391, 448, 10, 28, "Message",ExpressionUUID->"f1550aa6-862a-483b-84ee-64d7e2c7473b"],
+Cell[16501, 403, 692, 13, 34, "Output",ExpressionUUID->"24238892-b61e-4ab8-8266-e4da56904604"],
+Cell[17196, 418, 586, 10, 34, "Output",ExpressionUUID->"0099e00c-6c88-4101-b73a-52faf21893df"],
+Cell[17785, 430, 448, 10, 28, "Message",ExpressionUUID->"e8fa22ba-a9bd-4513-b309-ce9aa3eaa95e"],
+Cell[18236, 442, 690, 13, 34, "Output",ExpressionUUID->"662d31f1-82f6-471a-9436-4fd585fee753"],
+Cell[18929, 457, 584, 10, 34, "Output",ExpressionUUID->"d9fc47ea-20b5-4592-9def-2c8cd6f9cf6e"],
+Cell[19516, 469, 586, 9, 34, "Output",ExpressionUUID->"33e9de17-f8fc-4d2b-a7b8-58a62fffc42c"]
+}, Open  ]],
+Cell[20117, 481, 1372, 30, 157, "Input",ExpressionUUID->"b4e0be0c-f650-4cd1-a15d-b8cb56da0908"],
+Cell[CellGroupData[{
+Cell[21514, 515, 510, 12, 52, "Input",ExpressionUUID->"30edbeba-6a91-493b-961f-a6dbb3d223dc"],
+Cell[22027, 529, 507, 11, 56, "Output",ExpressionUUID->"ae53a5ac-a065-45e9-9a45-c99e812b25ba"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22571, 545, 1385, 37, 199, "Input",ExpressionUUID->"2e73d098-7b72-41c8-bc13-43deecbfc9ec"],
+Cell[23959, 584, 11102, 240, 1295, "Output",ExpressionUUID->"f21a26e7-6f94-48ae-8f55-bb5aa4c9376a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35098, 829, 2804, 66, 388, "Input",ExpressionUUID->"bad1d496-8aae-42b8-a36c-49c24282b233"],
+Cell[37905, 897, 366, 6, 34, "Output",ExpressionUUID->"6e1aa2a0-ea99-4ab2-b7e1-ce34754fc34c"]
+}, Open  ]],
+Cell[38286, 906, 187, 4, 30, "Input",ExpressionUUID->"4b9dc46c-7e2c-4167-9eb8-450780131785"],
+Cell[38476, 912, 187, 4, 30, "Input",ExpressionUUID->"cbb639ee-93bf-4852-95a7-3668c5d73332"],
+Cell[CellGroupData[{
+Cell[38688, 920, 1023, 24, 136, "Input",ExpressionUUID->"b58c4d8c-6652-4d32-8d33-b4e38c39dba3"],
+Cell[39714, 946, 1809, 31, 329, "Output",ExpressionUUID->"27672568-cdb7-4174-ba10-ca6d1f8a18cf"],
+Cell[41526, 979, 502, 8, 34, "Output",ExpressionUUID->"58f8c719-6f50-4e2a-90e9-50509c067c23"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42065, 992, 532, 10, 73, "Input",ExpressionUUID->"910772b9-a730-4e75-b28f-32202ce9f3e3"],
+Cell[42600, 1004, 5124, 107, 61, "Output",ExpressionUUID->"d69bd15d-e0c6-45c4-af87-38bc72acdff8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47761, 1116, 536, 11, 30, "Input",ExpressionUUID->"d564c0ec-fc25-4dc2-9b82-438b725b6642"],
+Cell[48300, 1129, 5710, 125, 61, "Output",ExpressionUUID->"7d30bbe5-6ef0-4696-9df3-75b48a913da8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54047, 1259, 1391, 26, 178, "Input",ExpressionUUID->"399c3098-6c28-4f75-aea1-278ed9b6c66a"],
+Cell[55441, 1287, 2070, 28, 602, "Output",ExpressionUUID->"89886222-356a-4622-978f-62634691909c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57548, 1320, 422, 9, 73, "Input",ExpressionUUID->"7a1a7a3b-f723-4bcf-9a6c-2f699b2b8e24"],
+Cell[57973, 1331, 437, 8, 56, "Output",ExpressionUUID->"23f2e313-6dd1-4bde-a1cc-af2b49ba0e47"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58447, 1344, 520, 10, 73, "Input",ExpressionUUID->"e48fa588-3d8f-4bf0-a1ed-a00e01b4179d"],
+Cell[58970, 1356, 5377, 113, 293, "Output",ExpressionUUID->"a5d27590-ae9c-411c-987a-2ae266ee9c84"]
+}, Open  ]],
+Cell[64362, 1472, 664, 14, 94, "Input",ExpressionUUID->"0429f659-c74e-4f8e-a376-f29bf21fe5c4"],
+Cell[CellGroupData[{
+Cell[65051, 1490, 536, 13, 94, "Input",ExpressionUUID->"0cba8cbd-baba-4129-a174-c6ffafc35f29"],
+Cell[65590, 1505, 768, 12, 182, "Output",ExpressionUUID->"d5324147-75dd-42b9-8608-9513477509a7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66395, 1522, 396, 9, 94, "Input",ExpressionUUID->"e2fabee3-1f3f-48ca-8871-9e57168fcbf1"],
+Cell[66794, 1533, 4669, 101, 241, "Output",ExpressionUUID->"a46b8842-96c8-4c04-8bfb-ec3a8ecee1ff"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71500, 1639, 247, 6, 30, "Input",ExpressionUUID->"476986cb-ad2a-4332-94c2-7beff8fc8eec"],
+Cell[71750, 1647, 4873, 104, 259, "Output",ExpressionUUID->"ceb4e09a-6c0f-4e48-8f13-6643803a8589"]
+}, Open  ]],
+Cell[76638, 1754, 179, 3, 30, "Input",ExpressionUUID->"8ee4285c-7829-418d-8c18-c54ad30877a1"],
+Cell[76820, 1759, 403, 8, 94, "Input",ExpressionUUID->"ee47156e-6f6c-48ae-8e94-3e2ff7d867bd"]
+}
+]
+*)
+
